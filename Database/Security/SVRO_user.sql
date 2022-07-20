@@ -1,0 +1,2 @@
+﻿CREATE LOGIN [SVRO\user]
+    FROM WINDOWS;

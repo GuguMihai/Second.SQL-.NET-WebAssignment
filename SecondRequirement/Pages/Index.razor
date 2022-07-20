@@ -1,0 +1,61 @@
+﻿@page "/"
+@using System;
+@using System.Collections.Generic;
+@using System.Data;
+@using System.Data.SqlClient;
+@using System.Linq;
+@using System.Threading.Tasks;
+@using System.ComponentModel.DataAnnotations;
+@using System.ComponentModel.DataAnnotations.Schema;
+
+<EditForm Model="@model" OnValidSubmit="@ComputeResult">
+    <label>
+        First Name:
+        <input @bind="model.FirstName" />
+    </label>
+    <br />
+    <label>
+        Last Name:
+        <input @bind="model.LastName" />
+    </label>
+    <br />
+    <br />
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <button type="submit">Get DATA</button>
+    <br />
+    <br />
+    @Res
+</EditForm>
+
+@code {
+
+    private Data.DataModel model = new Data.DataModel();
+
+    public string Res { get; set; }
+
+    private void ComputeResult()
+    {
+        var tempRes = "";
+        using (var connection = new SqlConnection(@"Data Source=localhost;Initial Catalog=Database;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=600;Encrypt=False;TrustServerCertificate=False"))
+        {
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = new SqlCommand("[dbo].[GetFinalRes] @firstName = '" + model.FirstName + "', @lastName= '" + model.LastName + "'", connection).ExecuteReader();
+                while (reader.Read())
+                {
+                    tempRes += reader[0].ToString() + "; ";
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        Res = tempRes;
+    }
+}

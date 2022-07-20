@@ -1,0 +1,9 @@
+C:\Users\Mihai\source\repos\SecondRequirement\Database\bin\Debug\Database.dacpac
+C:\Users\Mihai\source\repos\SecondRequirement\Database\bin\Debug\Database.dll
+C:\Users\Mihai\source\repos\SecondRequirement\Database\bin\Debug\Database.pdb
+C:\Users\Mihai\source\repos\SecondRequirement\Database\obj\Debug\Model.xml
+C:\Users\Mihai\source\repos\SecondRequirement\Database\obj\Debug\refactor.xml
+C:\Users\Mihai\source\repos\SecondRequirement\Database\obj\Debug\postdeploy.sql
+C:\Users\Mihai\source\repos\SecondRequirement\Database\obj\Debug\predeploy.sql
+C:\Users\Mihai\source\repos\SecondRequirement\Database\obj\Debug\Database.dll
+C:\Users\Mihai\source\repos\SecondRequirement\Database\obj\Debug\Database.pdb

@@ -1,0 +1,6 @@
+﻿ALTER SERVER ROLE [sysadmin] ADD MEMBER [SVRO\user];
+
+
+GO
+ALTER SERVER ROLE [sysadmin] ADD MEMBER [NT SERVICE\SQLWriter];
+

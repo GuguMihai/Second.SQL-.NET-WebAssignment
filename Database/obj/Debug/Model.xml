@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="Database.dll" />
+			<Metadata Name="FileName" Value="C:\USERS\MIHAI\SOURCE\REPOS\SECONDREQUIREMENT\DATABASE\OBJ\DEBUG\DATABASE.DLL" />
+			<Metadata Name="AssemblyName" Value="Database" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\Users\Mihai\source\repos\SecondRequirement\Database\obj\Debug\Database.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlServerRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[SVRO\user]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[sysadmin]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlServerRoleMembership">
+			<Relationship Name="Member">
+				<Entry>
+					<References Name="[NT SERVICE\SQLWriter]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Role">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[sysadmin]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlEventSession" Name="[AlwaysOn_health]">
+			<Relationship Name="Definitions">
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="alwayson_ddl_executed" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="availability_group_lease_expired" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="availability_replica_automatic_failover_validation" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="availability_replica_manager_state_change" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="availability_replica_state" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="availability_replica_state_change" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="hadr_db_partner_set_sync_state" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="lock_redo_blocked" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlEventSessionDefinitions">
+						<Property Name="EventPackageName" Value="sqlserver" />
+						<Property Name="EventName" Value="error_reported" />
+						<Property Name="WhereExpression">
+							<Value><![CDATA[([error_number]=(9691) OR [error_number]=(35204) OR [error_number]=(9693) OR [error_number]=(26024) OR [error_number]=(28047) OR [error_number]=(26023) OR [error_number]=(9692) OR [error_number]=(28034) OR [error_number]=(28036) OR [error_number]=(28048) OR [error_number]=(28080) OR [error_number]=(28091) OR [error_number]=(26022) OR [error_number]=(9642) OR [error_number]=(35201) OR [error_number]=(35202) OR [error_number]=(35206) OR [error_number]=(35207) OR [error_number]=(26069) OR [error_number]=(26070) OR [error_number]>(41047) AND [error_number]<(41056) OR [error_number]=(41142) OR [error_number]=(41144) OR [error_number]=(1480) OR [error_number]=(823) OR [error_number]=(824) OR [error_number]=(829) OR [error_number]=(35264) OR [error_number]=(35265) OR [error_number]=(41188) OR [error_number]=(41189))]]></Value>
+						</Property>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Targets">
+				<Entry>
+					<Element Type="SqlEventSessionTarget">
+						<Property Name="EventPackageName" Value="package0" />
+						<Property Name="TargetName" Value="event_file" />
+						<Relationship Name="ParameterSettings">
+							<Entry>
+								<Element Type="SqlEventSessionSetting">
+									<Property Name="SettingName" Value="filename" />
+									<Property Name="SettingValue">
+										<Value><![CDATA[N'AlwaysOn_health.xel']]></Value>
+									</Property>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlEventSessionSetting">
+									<Property Name="SettingName" Value="max_file_size" />
+									<Property Name="SettingValue">
+										<Value><![CDATA[5]]></Value>
+									</Property>
+								</Element>
+							</Entry>
+							<Entry>
+								<Element Type="SqlEventSessionSetting">
+									<Property Name="SettingName" Value="max_rollover_files" />
+									<Property Name="SettingValue">
+										<Value><![CDATA[4]]></Value>
+									</Property>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[GetFinalRes]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+    DECLARE @i int = 0;
+    declare @t table(col1 varchar(100));
+
+WHILE @i < 100
+BEGIN
+    SET @i = @i + 1
+
+    IF (@i % 3 = 0) AND (@i % 5 = 0)
+        BEGIN
+			insert @t values(@firstName + ' ' + @lastName)
+        END
+    ELSE IF (@i % 3 = 0)
+        BEGIN
+			insert @t values(@firstName)
+        END
+    ELSE IF (@i % 5 = 0)
+        BEGIN
+			insert @t values(@lastName)
+        END
+    ELSE
+         BEGIN
+			insert @t values(CAST(@i as varchar(10)))
+        END
+END
+
+select * from @t
+
+    
+
+END;]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetFinalRes].[@firstName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[GetFinalRes].[@lastName]" />
+				</Entry>
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[varchar]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="DynamicObjects">
+				<Entry>
+					<Element Type="SqlDynamicColumnSource" Name="[dbo].[GetFinalRes].[@t]">
+						<Relationship Name="Columns">
+							<Entry>
+								<Element Type="SqlSimpleColumn" Name="[dbo].[GetFinalRes].[@t].[col1]">
+									<Relationship Name="TypeSpecifier">
+										<Entry>
+											<Element Type="SqlTypeSpecifier">
+												<Property Name="Length" Value="100" />
+												<Relationship Name="Type">
+													<Entry>
+														<References ExternalSource="BuiltIns" Name="[varchar]" />
+													</Entry>
+												</Relationship>
+											</Element>
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetFinalRes].[@firstName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="500" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[GetFinalRes].[@lastName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="500" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[varchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="643" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE    PROCEDURE [dbo].[GetFinalRes] (&#xD;&#xA;    @firstName Varchar(500),&#xD;&#xA;    @lastName Varchar(500)&#xD;&#xA;) AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlAsymmetricKey" Name="[MS_SQLEnableSystemAssemblyLoadingKey]">
+			<Property Name="Algorithm" Value="2" />
+			<Relationship Name="Authorizer">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlLogin" Name="[NT SERVICE\SQLWriter]">
+			<Property Name="IsMappedToWindowsLogin" Value="True" />
+			<Property Name="IsCheckPolicyOn" Value="False" />
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlLogin" Name="[sa]">
+			<Property Name="Password" Value="WU{BuUljxyt|A os yzdia@cmsFT7_&amp;#$!~&lt;|czh,raO:;kg" />
+			<Property Name="IsDisabled" Value="True" />
+			<Annotation Type="GloballyScoped" />
+		</Element>
+		<Element Type="SqlLogin" Name="[SVRO\user]">
+			<Property Name="IsMappedToWindowsLogin" Value="True" />
+			<Property Name="IsCheckPolicyOn" Value="False" />
+			<Annotation Type="GloballyScoped" />
+		</Element>
+	</Model>
+</DataSchemaModel>
